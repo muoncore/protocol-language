@@ -1,5 +1,10 @@
 # Minimal Protocol List
 
+* Query
+* Request when
+* Subscribe
+* Propose
+* Contract net
 
 
 ## Existing (Simple)
