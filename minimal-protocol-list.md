@@ -6,7 +6,7 @@
 * [Propose](http://www.fipa.org/specs/fipa00036/SC00036H.html)
 * [Contract net](http://www.fipa.org/specs/fipa00029/SC00029H.html)
 
-Next sections presents a diagram and a short description extracted from FIPA website. Take into account that exceptions have not been included in this document. They can be found, for each protocol, in the links above.
+Next sections present a diagram and a short description extracted from FIPA website for each Interaction Protocol. Take into account that exceptions have not been included in this document. They can be found, for each protocol, in the links above.
 
 ### Query
 ![Query AUML Diagram](http://www.fipa.org/specs/fipa00027/SC00027H_files/image001.gif "Query AUML diagram")
