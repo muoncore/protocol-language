@@ -82,3 +82,26 @@ In the case of 1:N interaction protocols or sub-protocols the Initiator is free 
 ## Technical Proposed
 
 * Pipeline
+* Observe Projection.
+
+### Pipeline
+
+Left to right data process. Have an orchestrating service be able to arrange dynamic pipelines of processes, anaologous to the Unix pipeline.
+
+Needs to have an agent be able to coordinate multiple other services, send data to the first in the pipeline, and then observe results from the last service. Data will then be passed between the other services without reference to the orchestrating agent.
+
+### Observe Projection
+
+Photon has a projection system. It also has stream replay. 
+
+It would be useful to have some method of combining the two systems so that Photon can manage the state, while the observing agent can be notified of changes as rapidly as possible and not have to rebuild state.
+
+#### Push Projection
+
+Maintain the projection on the server side, and have thate state pushed into any subscribing service. This would require some form of delta to be calculated on the projection to make it performance, but would be fairly easy to implement on the client.
+
+#### Projection + Stream
+
+A simpler system would be to subscribe to a projection, you then get the state as the first item, possibly with the projection function as well. From that point on, the local service will receive the raw events, and be able to calculate the state locally. 
+
+This would be simpler to arrange, but has the potential of losing coherence without some form of consistency check back to the source projection.
